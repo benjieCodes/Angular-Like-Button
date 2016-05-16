@@ -1,13 +1,10 @@
 function MainController ($scope) {
-
+  $scope.count = 0;
   $scope.buttonStatus = "Likes:" + " ";
   $scope.clicked = function () {
-
-    if ($scope.count >= 1) {
-      $scope.buttonStatus = "Likes: "
-    }
-    else $scope.buttonStatus = "Like: ";
-    }
+  $scope.count++;
+  $scope.buttonStatus = ($scope.count === 1) ? "Like: " : "Likes: ";
   }
+}
 
 export { MainController };
